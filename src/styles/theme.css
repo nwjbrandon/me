@@ -1,0 +1,99 @@
+/* ===========================================================================
+   Design tokens. Colours switch on the `data-theme` attribute set on <html>.
+   Everything in the app reads from these variables, so re-theming is a
+   matter of editing values here.
+   =========================================================================== */
+
+:root {
+  /* Brand accent — shared across both themes */
+  --accent: #6e8bff;
+  --accent-2: #a06bff;
+  --accent-3: #22d3ee;
+  --accent-gradient: linear-gradient(120deg, var(--accent), var(--accent-2));
+  --accent-gradient-vivid: linear-gradient(
+    120deg,
+    var(--accent-3),
+    var(--accent),
+    var(--accent-2)
+  );
+
+  /* Radii */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --radius-pill: 999px;
+
+  /* Spacing scale */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --space-9: 6rem;
+
+  /* Fluid type scale */
+  --fs-hero: clamp(2.5rem, 7vw, 5rem);
+  --fs-h2: clamp(1.75rem, 4vw, 2.75rem);
+  --fs-h3: clamp(1.1rem, 2vw, 1.35rem);
+  --fs-body: clamp(1rem, 1.4vw, 1.125rem);
+  --fs-sm: 0.875rem;
+  --fs-xs: 0.78rem;
+
+  /* Layout */
+  --content-max: 1100px;
+  --nav-h: 68px;
+
+  --transition: 200ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ----------------------------- Dark (default) ---------------------------- */
+:root,
+[data-theme='dark'] {
+  color-scheme: dark;
+
+  --bg: #0b0f1a;
+  --bg-elev: #0e1424;
+  --bg-glow-1: rgba(110, 139, 255, 0.18);
+  --bg-glow-2: rgba(160, 107, 255, 0.16);
+
+  --surface: rgba(255, 255, 255, 0.04);
+  --surface-strong: rgba(255, 255, 255, 0.07);
+  --surface-hover: rgba(255, 255, 255, 0.09);
+  --border: rgba(255, 255, 255, 0.1);
+  --border-strong: rgba(255, 255, 255, 0.18);
+
+  --text: #e8ebf5;
+  --text-muted: #9aa4bf;
+  --text-faint: #6b7490;
+
+  --shadow: 0 18px 50px -20px rgba(0, 0, 0, 0.7);
+  --tag-bg: rgba(110, 139, 255, 0.12);
+  --tag-text: #b9c4ff;
+}
+
+/* -------------------------------- Light ---------------------------------- */
+[data-theme='light'] {
+  color-scheme: light;
+
+  --bg: #f6f7fb;
+  --bg-elev: #ffffff;
+  --bg-glow-1: rgba(110, 139, 255, 0.16);
+  --bg-glow-2: rgba(160, 107, 255, 0.14);
+
+  --surface: rgba(15, 23, 42, 0.025);
+  --surface-strong: rgba(15, 23, 42, 0.04);
+  --surface-hover: rgba(15, 23, 42, 0.06);
+  --border: rgba(15, 23, 42, 0.1);
+  --border-strong: rgba(15, 23, 42, 0.16);
+
+  --text: #141a2a;
+  --text-muted: #566076;
+  --text-faint: #8a93a8;
+
+  --shadow: 0 18px 50px -24px rgba(31, 41, 71, 0.28);
+  --tag-bg: rgba(110, 139, 255, 0.12);
+  --tag-text: #4658c8;
+}

@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="alternate icon" href="/icon.jpg" />
+    <link rel="apple-touch-icon" href="/icon.jpg" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#0b0f1a" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Brandon Ng — Software Engineer</title>
+    <meta
+      name="description"
+      content="Brandon Ng — Software Engineer specialising in machine learning and full-stack development. Building computer vision, NLP, and scalable cloud systems."
+    />
+    <meta name="author" content="Brandon Ng" />
+
+    <!-- Open Graph / social -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Brandon Ng — Software Engineer" />
+    <meta
+      property="og:description"
+      content="Software Engineer specialising in machine learning and full-stack development."
+    />
+    <meta property="og:image" content="/icon.jpg" />
+    <meta property="og:url" content="https://nwjbrandon.github.io" />
+    <meta name="twitter:card" content="summary" />
+
+    <!-- Avoid a flash of the wrong theme before React mounts -->
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem('theme');
+          var theme = stored || 'dark';
+          document.documentElement.setAttribute('data-theme', theme);
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

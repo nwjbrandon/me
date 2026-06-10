@@ -1,0 +1,40 @@
+.section {
+  padding-block: clamp(3.5rem, 9vw, 6.5rem);
+}
+
+.header {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-4);
+  margin-bottom: var(--space-7);
+}
+
+.index {
+  font-size: var(--fs-h3);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.title {
+  font-size: var(--fs-h2);
+  white-space: nowrap;
+}
+
+.rule {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, var(--border-strong), transparent);
+}
+
+@media (max-width: 540px) {
+  .header {
+    gap: var(--space-3);
+  }
+  .rule {
+    display: none;
+  }
+}
